@@ -1,6 +1,12 @@
+import Componnets from "./Components";
+
+
 function App(){
 
-  return(<div></div>);
+  return(
+  <>
+    <Componnets />
+  </>);
 }
 
 export default App;
