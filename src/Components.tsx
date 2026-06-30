@@ -1,10 +1,16 @@
-import {useState} from "react";
-function Components(){
-
-
+import { useState } from "react";
+function Components() {
 
     const [foods, setFoods] = useState(["apple", "banana", "orange"]);
-    return(<div></div>);
+
+    function handleAddFood (){}
+    return (
+
+        <div>
+            <p>Foods</p>
+            <input type="text" onChange={ handleAddFood}></input>
+        </div>
+    );
 }
 
 
