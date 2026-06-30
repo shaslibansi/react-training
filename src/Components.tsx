@@ -3,12 +3,19 @@ function Components() {
 
     const [foods, setFoods] = useState(["apple", "banana", "orange"]);
 
-    function handleAddFood (){}
+    function handleAddFood (){
+        
+    }
+    function handleRemoveFood (){
+        
+    }
     return (
 
         <div>
             <p>Foods</p>
+            <ul>{foods}</ul>
             <input type="text" onChange={ handleAddFood}></input>
+            <button> add </button>
         </div>
     );
 }
