@@ -1,24 +1,26 @@
-import { useState } from "react";
+import { useState } from 'react';
+
 function Components() {
+  const [foods, setFoods] = useState(['apple', 'banana', 'orange']);
 
-    const [foods, setFoods] = useState(["apple", "banana", "orange"]);
-
-    function handleAddFood (){
-        
-    }
-    function handleRemoveFood (){
-        
-    }
-    return (
-
-        <div>
-            <p>Foods</p>
-            <ul>{foods}</ul>
-            <input type="text" onChange={ handleAddFood}></input>
-            <button> add </button>
-        </div>
-    );
+  function handleAddFoods() {
+    const newFood = document.getElementById('foodInput').value;
+    document.getElementById('foodInput').value = '';
+    useState((f) => [...f, newFood]);
+  }
+  function handleRemovedFoods() {}
+  return (
+    <div>
+      <p>list of foods</p>
+      <ul>
+        {foods.map((food, index) => (
+          <li key={index}>{food}</li>
+        ))}
+      </ul>
+      <input type="text" id="foodInput" placeholder="enter foods"></input>
+      <button onClick={handleAddFoods}>Add</button>
+    </div>
+  );
 }
-
 
 export default Components;
